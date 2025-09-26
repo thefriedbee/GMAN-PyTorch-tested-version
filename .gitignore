@@ -1,0 +1,31 @@
+# data file
+data/pems-bay.h5
+data/log
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Byte-code files
+__pycache__/
+*.pyc
+
+# Editor/IDE files
+.vscode/
+.idea/
+.DS_Store
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+
+# Sensitive data/configuration
+local_settings.py
+config.ini
+
+# Build artifacts
+build/
+dist/
