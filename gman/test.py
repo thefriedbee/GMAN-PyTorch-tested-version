@@ -25,7 +25,7 @@ def test(args, log):
     # test model
     log_string(log, '**** testing model ****')
     log_string(log, 'loading model from %s' % args.model_file)
-    model = torch.load(args.model_file)
+    model = torch.load(args.model_file, weights_only=False, map_location=args.device)
     log_string(log, 'model restored!')
     log_string(log, 'evaluating...')
 

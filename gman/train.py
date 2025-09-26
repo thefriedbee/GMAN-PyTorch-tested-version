@@ -102,7 +102,7 @@ def train(model, args, log, loss_criterion, optimizer, scheduler):
         scheduler.step()
 
     model.load_state_dict(best_model_wts)
-    torch.save(model.state_dict(), args.model_file)
+    torch.save(model, args.model_file)
     log_string(log, f'Training and validation are completed, and model has been stored as {args.model_file}')
     return train_total_loss, val_total_loss
 

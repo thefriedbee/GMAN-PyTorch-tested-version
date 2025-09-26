@@ -29,7 +29,7 @@ def log_string(log, string):
 def metric(pred, label, y_mask = None, print_percent_masked = True):
     if y_mask is None:
         print("No mask provided, using all values")
-        y_mask = torch.ones_like(label)
+        y_mask = torch.ones_like(label, device=pred.device).to(torch.bool)
     
     # get percent of masked values
     percent_masked = torch.sum(y_mask) / y_mask.numel()
