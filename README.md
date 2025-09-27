@@ -24,7 +24,7 @@ python main.py
 
 Run basic tests
 ```
-python model_test.py
+pytest model_test.py
 ```
 
 ## Dataset
