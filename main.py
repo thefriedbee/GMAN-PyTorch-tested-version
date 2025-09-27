@@ -59,7 +59,7 @@ parser.add_argument(
     help='batch size'
 )
 parser.add_argument(
-    '--max_epoch', type=int, default=1,
+    '--max_epoch', type=int, default=10,
     help='epoch to run'
 )
 parser.add_argument(
@@ -165,9 +165,11 @@ if __name__ == '__main__':
         np.savetxt('./figure/' + name[i] + '.txt', data, fmt='%s')
     
     # Plot the test prediction vs target（optional)
-    plt.figure(figsize=(10, 280))
-    for k in range(325):
-        plt.subplot(325, 1, k + 1)
+    num_plots = 50
+    plt.figure(figsize=(10, num_plots * 1.5))
+    for k in range(num_plots):
+        print(f"plotting {k}th prediction")
+        plt.subplot(num_plots, 1, k + 1)
         for j in range(len(testPred)):
             c, d = [], []
             for i in range(12):

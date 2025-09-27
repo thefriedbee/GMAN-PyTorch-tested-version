@@ -2,6 +2,7 @@
 data/pems-bay.h5
 data/log
 data/GMAN.pkl
+figure/*.txt
 
 # Virtual environments
 venv/
