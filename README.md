@@ -2,6 +2,12 @@
 
 GMAN model has become a very frequently used model for traffic predictions. Based on a previous release of GMAN implementation with PyTorch ("https://github.com/VincLee8188/GMAN-PyTorch/tree/master"), I spent a week to go through the code. While the code looks good overall, there are a number of issues in the code. So, this repository is a corrected and cleaned version of the implementaion. It seems like the original repository holders are not reviewing the code anymore.
 
+## Improvements
+- More comprehensive comments
+- Add type annotations
+- Support multiple torch devices ('cpu', 'cuda', 'mps')
+- Refactored/Improved pipeline (e.g., better data loader)
+
 ## Basic Requirements
 * Python (>=3.11 recommended)
 * PyTorch
@@ -9,6 +15,17 @@ GMAN model has become a very frequently used model for traffic predictions. Base
 * matplotlib
 * numpy
 * pytest
+
+### Usage
+Run the whole training process
+```
+python main.py
+```
+
+Run basic tests
+```
+python model_test.py
+```
 
 ## Dataset
 The datasets could be  unzipped and load from the data directory in this repository.
